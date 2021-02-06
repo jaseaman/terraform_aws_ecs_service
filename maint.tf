@@ -5,7 +5,7 @@ locals {
 }
 
 module "container_definition" {
-  source = "git::https://github.com/cloudposse/terraform-aws-ecs-container-definition.git?ref=0.49.0"
+  source = "git::https://github.com/cloudposse/terraform-aws-ecs-container-definition.git?ref=0.46.2"
   container_name = local.combined_name
   container_image = var.container_image
   container_memory = var.container_memory
@@ -18,7 +18,7 @@ module "container_definition" {
 }
 
 module "ecs_alb_service_task" {
-  source = "git::https://github.com/cloudposse/terraform-aws-ecs-alb-service-task.git?ref=0.46.1"
+  source = "git::https://github.com/cloudposse/terraform-aws-ecs-alb-service-task.git?ref=0.43.0"
   stage = var.environment
   name = var.name
   alb_security_group = var.alb_security_group_id
