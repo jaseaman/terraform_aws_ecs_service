@@ -22,7 +22,7 @@ module "ecs_alb_service_task" {
   stage = var.environment
   name = var.name
   alb_security_group = var.alb_security_group_id
-  container_definition_json = module.container_definition.json
+  container_definition_json = module.container_definition.json_map_encoded
   ecs_cluster_arn = var.ecs_cluster_arn
   launch_type = "EC2"
   ecs_load_balancers = [
