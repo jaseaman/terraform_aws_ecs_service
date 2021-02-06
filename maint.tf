@@ -18,7 +18,7 @@ module "container_definition" {
 }
 
 module "ecs_alb_service_task" {
-  source = "git::https://github.com/cloudposse/terraform-aws-ecs-alb-service-task.git?ref=master"
+  source = "git::https://github.com/cloudposse/terraform-aws-ecs-alb-service-task.git?ref=0.46.1"
   stage = var.environment
   name = var.name
   alb_security_group = var.alb_security_group_id
