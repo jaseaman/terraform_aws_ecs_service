@@ -5,7 +5,7 @@ locals {
 }
 
 module "container_definition" {
-  source = "git::https://github.com/cloudposse/terraform-aws-ecs-container-definition.git?ref=tags/0.21.0"
+  source = "git::https://github.com/cloudposse/terraform-aws-ecs-container-definition.git?ref=0.49.0"
   container_name = local.combined_name
   container_image = var.container_image
   container_memory = var.container_memory
