@@ -117,15 +117,13 @@ variable "minimum_instances_count" {
   default = 1
 }
 
-variable "deployment_minimum_healthy_percent" 
-{
+variable "deployment_minimum_healthy_percent" {
   type = number
   description = "The minimum percentage of healthy containers at any time"
   default = 50
 }
 
-variable "deployment_maximum_healthy_percent"
-{
+variable "deployment_maximum_healthy_percent" {
   type = number
   description = "The maximum percentage of healthy containers at any time"
   default = 200
