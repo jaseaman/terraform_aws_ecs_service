@@ -40,8 +40,8 @@ module "ecs_alb_service_task" {
   propagate_tags = "SERVICE"
   desired_count = var.minimum_instances_count
   health_check_grace_period_seconds = 20
-  deployment_minimum_healthy_percent = 100
-  deployment_maximum_percent = 200
+  deployment_minimum_healthy_percent = var.deployment_minimum_healthy_percent
+  deployment_maximum_percent = var.deployment_maximum_healthy_percent
   task_memory = var.container_memory
   task_cpu = var.container_cpu
   network_mode = "bridge"
