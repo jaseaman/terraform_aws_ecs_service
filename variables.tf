@@ -111,10 +111,22 @@ variable "ecs_cluster_arn" {
   description = "The arn of the cluster to launch the service on"
 }
 
+variable "desired_instances_count" {
+  type = number
+  description = "The target amount of service containers to scale to"
+  default = 1
+}
+
 variable "minimum_instances_count" {
   type = number
   description = "The minimum amount of service containers to scale down to"
   default = 1
+}
+
+variable "maximum_instances_count" {
+  type = number
+  description = "The maximum amount of service containers to scale up to"
+  default = 2
 }
 
 variable "deployment_minimum_healthy_percent" {
@@ -127,12 +139,6 @@ variable "deployment_maximum_healthy_percent" {
   type = number
   description = "The maximum percentage of healthy containers at any time"
   default = 200
-}
-
-variable "maximum_instances_count" {
-  type = number
-  description = "The maximum amount of service containers to scale up to"
-  default = 2
 }
 
 variable "alb_listener_arn" {
